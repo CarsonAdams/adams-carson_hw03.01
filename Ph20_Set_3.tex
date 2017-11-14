@@ -1,7 +1,7 @@
 % THIS IS A CHANGE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Preamble
 \documentclass{article}
-\usepackage{amsmath,amssymb,amsthm,fullpage,float,graphicx,braket,rotating}
+\usepackage{amsmath,amssymb,amsthm,fullpage,float,graphicx,braket,rotating,verbatim}
 \newtheorem*{prop}{Proposition}
 \newcommand{\e}{\epsilon}
 \newcommand{\del}{\partial}
@@ -87,6 +87,19 @@ The phase-space geometries of the explicit and implicit Euler methods are not cl
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Exercise 2
 \subsection*{Exercise 3}
 The total energy estimated by the symplectic Euler method does not grow without bound or dissipate to zero, but instead oscillates around the true constant energy at twice the frequency of the oscillator itself. This is exactly as expected from the phase-space diagram which shows the symplectic trajectory deviating `in' and `out' twice per cycle (i.e. the ellipse crosses the true circular path a total of four times per full motion). 
+
+
+
+\section*{Assignment 4}
+\subsection*{Makefile}
+\verbatiminput{Makefile}
+
+\subsection*{Version control}
+\verbatiminput{git.log}
+
+
+\subsection*{Source}
+\verbatiminput{Ph20_Set_3.py}
 
 
 \end{document}                  
