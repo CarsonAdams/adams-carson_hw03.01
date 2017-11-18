@@ -3,7 +3,7 @@ all : plot pdf
 
 .PHONY : plot
 plot : img/
-	
+
 img/ : Ph20_Set_3.ipynb
 	rm -rf $@
 	mkdir $@
@@ -25,7 +25,7 @@ git.log :
 	git log > git.log
 
 Ph20_Set_3.py : Ph20_Set_3.ipynb
-	jupyter-2.7 nbconvert --to script  Ph20_Set_3.ipynb
+	jupyter nbconvert --to script  Ph20_Set_3.ipynb
 
 .PHONY : clean
 clean :
