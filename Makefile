@@ -7,7 +7,7 @@ plot : img/
 img/ : Ph20_Set_3.ipynb
 	rm -rf $@
 	mkdir $@
-	jupyter-2.7 nbconvert --execute --allow-errors --to notebook --inplace Ph20_Set_3.ipynb
+	jupyter nbconvert --execute --allow-errors --to notebook --inplace Ph20_Set_3.ipynb
 
 Ph20_Set_3.py : Ph20_Set_3.ipynb
 	jupyter nbconvert --to script Ph20_Set_3.ipynb
