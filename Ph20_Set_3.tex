@@ -11,6 +11,12 @@
 % \newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
 \def\bal#1\eal{\begin{align}#1\end{align}}
 
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\newcommand{\cdw}[1]
+           {{\color{blue} [CDW: comment] #1}}
+\newcommand{\correct}[1]
+           {{\color{red} [CDW: needs correction] #1}}
+           
 \theoremstyle{definition}
 \newtheorem*{disc}{Discussion}
 
@@ -19,11 +25,18 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Heading
       \title{Ph 20
-      \\Problem Set 3}
+        \\Problem Set 3
+      \\ \cdw{PASS}}
       \author{Carson Adams}
       \date{}
       \maketitle
-      
+
+\cdw{
+  \begin{enumerate}
+  \item Your dependency structure is a little fragile: if the directory \texttt{img/} exists but one of the image files doesn't, that file won't be regenerated.
+  \item Putting the notebook under version control can make life a little difficult: every time you re-run the notebook, you change it, resulting in large, unreadable diffs. It's not an unreasonable choice (in particular: nice use of nbconvert), but there's a serious tradeoff there.
+  \end{enumerate}
+}
 \section*{Part 1}      
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Exercise 1
 \subsection*{Exercise 1}
